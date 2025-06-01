@@ -1,6 +1,6 @@
 # 欢迎来到 GoalBlink 的 GitHub 主页! ⚽️🏟️
-[English](http://github.com/goalblink/goalblink/README.md)
-[简体中文](http://github.com/goalblink/goalblink/README_CN.md)
+[English](http://github.com/GoalBlink/.github/blob/main/profile/README.md)
+[简体中文](http://github.com/GoalBlink/.github/blob/main/profile/README_CN.md)
 
 ## 关于 GoalBlink 🚀
 
