@@ -12,8 +12,11 @@ jobs:
           root_file: goalblink_handbook.tex
           pre_compile: "fc-list :lang=zh"
           latexmk_use_xelatex: true
-      - name: Release PDF
-        uses: softprops/action-gh-release@v2
-        if: github.ref_type == 'tag'
-        with:
-          files: goalblink_handbook.pdf
+      - name: Commit PDF to master
+        if: github.ref == 'refs/heads/master'
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add goalblink_handbook.pdf
+          git commit -m "自动更新 handbook PDF [ci skip]" || echo "No changes to commit"
+          git push origin master
