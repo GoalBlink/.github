@@ -14,5 +14,6 @@ jobs:
           latexmk_use_xelatex: true
       - name: Release PDF
         uses: softprops/action-gh-release@v2
+        if: github.ref_type == 'tag'
         with:
           files: goalblink_handbook.pdf
