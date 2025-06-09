@@ -12,8 +12,7 @@ jobs:
           root_file: goalblink_handbook.tex
           pre_compile: "fc-list :lang=zh"
           latexmk_use_xelatex: true
-      - name: Upload PDF file
-        uses: actions/upload-artifact@v4
+      - name: Release PDF
+        uses: softprops/action-gh-release@v2
         with:
-          name: PDF
-          path: goalblink_handbook.pdf
+          files: goalblink_handbook.pdf
